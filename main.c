@@ -70,5 +70,23 @@ int main()
     // Explicit Conversion
     float total = (float) 10 / 3;
     printf("%f\n", total);
+
+    // use 'const' if you don't want others to change variable values!
+    const float pi = 3.1415;
+    const int age = 45;
+
+    // Arithmetic Operators
+    // this includes (+, -, *, /, %)
+    int num1 = 8;
+    int num2 = 4;
+
+    printf("%d\n", num1 + num2);
+    printf("%d\n", num1 - num2);
+    printf("%d\n", num1 * num2);
+    printf("%d\n", num1 / num2);
+    printf("%d\n", num1 % num2);
+
+
+
     return 0;
 }
