@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 
 // Comments
 // You can write a comment using //
@@ -76,7 +78,7 @@ int main()
     const int age = 45;
 
     // Arithmetic Operators
-    // this includes (+, -, *, /, %)
+    // this includes (+, -, *, /, %, ++, --)
     int num1 = 8;
     int num2 = 4;
 
@@ -85,6 +87,71 @@ int main()
     printf("%d\n", num1 * num2);
     printf("%d\n", num1 / num2);
     printf("%d\n", num1 % num2);
+    printf("%d\n", ++num1);
+    printf("%d\n", --num2);
+
+    // Assignment Operators
+    printf("%d\n", num1 += 3);
+    printf("%d\n", num1 -= 3);
+    printf("%d\n", num1 *= 3);
+    printf("%d\n", num1 /= 3);
+    printf("%d\n", num1 %= 3);
+    printf("%d\n", num1 &= 3);
+    printf("%d\n", num1 |= 3);
+    printf("%d\n", num1 ^= 3);
+    printf("%d\n", num1 >>= 3);
+    printf("%d\n", num1 <<= 3);
+
+    // Comparison Operators
+    // These include "==, !=, >, <, >=, <="
+
+    // Logical Operators
+    // && = AND
+    // || = OR
+    // !  = NOT
+
+    // Booleans 
+    bool am_i_human = true;
+    bool am_i_alien = false;
+    printf("%d\n", am_i_human);
+    printf("%d\n", am_i_alien);
+
+    // If statements in C
+    if (100 > 20)
+    {
+        printf("100 is greater than 20\n");
+    }
+
+    // If else statements in C
+    int test_integer = 10;
+
+    if (test_integer > 100)
+    {
+        printf("That's a pretty big number\n");
+    }
+    else
+    {
+        printf("That's a pretty small number\n");
+    }
+
+    // Else if statements in C
+    int time = 15;
+    if (time < 10) 
+    {
+        printf("It's Morning!.\n");
+    } 
+    else if (time < 20) 
+    {
+        printf("It's the day time!\n");
+    } 
+    else 
+    {
+        printf("It's the afternoon!\n");
+    }
+
+    // Short Hand If Else (Ternary Operator)
+    int time_of_day = 20;
+    (time_of_day < 18) ? printf("Good day!\n") : printf("Good evening!\n");
 
 
 
