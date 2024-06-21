@@ -5,4 +5,4 @@ This is a repository that will go over all topics in the C language.  I hope tha
 gcc -o main main.c
 -----------------------------------------------------------
 # Make:<br>
-.\main
+# .\main
