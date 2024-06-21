@@ -1,6 +1,24 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+// Function Declarations
+void print_hello_world();
+void print_names(char name[], int age);
+
+// Structures
+typedef struct 
+{
+    int my_current_age;
+    char my_letter;
+} my_struct;
+
+// Enums
+typedef enum 
+{
+    STOPPED,
+    STARTING,
+    RUNNING
+}current_engine_state;
 
 // Comments
 // You can write a comment using //
@@ -221,9 +239,103 @@ int main()
 
     }
 
+    // Arrays
+    int my_array[] = {1,2,3,4,5,6,7,8,9,10};
+    printf("%d\n", my_array[1]);
 
+    // change element in array
+    my_array[1] = 44;
+    printf("%d\n", my_array[1]);
 
+    // loop through an array
+    for (int i = 0; i < 10; ++i)
+    {
+        printf("%d\n", my_array[i]);
+    }
 
+    // to get the length of the array
+    int length = sizeof(my_array) / sizeof(my_array[0]);
+    printf("%d\n", length);
+
+    // Multidimensional arrays
+    int matrix[2][3] = { {1,2,3}, {4,5,6} };
+    printf("%d\n", matrix[0][2]);
+    printf("%d\n", matrix[1][2]);
+
+    // change/update element in an array
+    matrix[0][2] = 10;
+    printf("%d\n", matrix[0][2]);
+
+    // Strings - used to store text or characters
+    char hello[] = "Hello World";
+    printf("%s\n", hello);
+    printf("%c\n", hello[0]);  // access certain element in string
+    printf("%c\n", hello[3]);
+
+    // Special Characters
+    char text[] = "Hello my name is John Doe \"aka bro\" and I like to code";
+    printf("%s\n", text);
+
+    // User input in C
+    int user_input;
+    printf("Type a number: ");
+    scanf("%d", &user_input);
+    printf("Your number is: %d\n", user_input);
+
+    // Memory Address
+    int my_age = 21;
+    printf("%p\n", &my_age);
+
+    // Pointers - stores memory address of another variable and its value
+    int my_height = 200;
+    int* my_ptr = &my_height;
+    printf("%d\n", my_height);
+    printf("%p\n", &my_height);
+    printf("%p\n", my_ptr);      // reference
+    printf("%d\n", *my_ptr);     // dereference
+
+    int my_numbers[4] = {1, 2, 3, 4};
+
+    // Change the value of the first element to 13
+    *my_numbers = 55;
+
+    // Change the value of the second element to 17
+    *(my_numbers + 1) = 63;
+
+    // Get the value of the first element
+    printf( "%d\n", *my_numbers );
+
+    // Get the value of the second element
+    printf( "%d\n", *(my_numbers + 1) );
+
+    // Call a function
+    print_hello_world();  // a function can be called multiple times
+    print_hello_world();
+    print_hello_world();
+    print_names("John",12);
+    print_names("Doe", 24);
+    print_names("Carmack", 55);
+
+    // Structures
+    my_struct test_structure;
+    test_structure.my_current_age = 10;
+    test_structure.my_letter = 'G';
+    printf("My number: %d\n", test_structure.my_current_age);
+    printf("My letter: %c\n", test_structure.my_letter);
+
+    // Enumeration
+    current_engine_state motor_status = STARTING;
+    printf("%d\n", motor_status);
 
     return 0;
+}
+
+void print_hello_world()
+{
+    printf("Hello, World!\n");
+}
+
+void print_names(char name[], int age)
+{
+    printf("Hello %s. You are %d years old\n", name, age);
 }
