@@ -153,6 +153,76 @@ int main()
     int time_of_day = 20;
     (time_of_day < 18) ? printf("Good day!\n") : printf("Good evening!\n");
 
+    // Switch Statements
+    int month = 4;
+
+    switch (month) 
+    {
+    case 1:
+        printf("Jan\n");
+        break;
+    case 2:
+        printf("Feb\n");
+        break;
+    case 3:
+        printf("March\n");
+        break;
+    case 4:
+        printf("April\n");
+        break;
+    case 5:
+        printf("May\n");
+        break;
+    case 6:
+        printf("June\n");
+        break;
+    case 7:
+        printf("July\n");
+        break;
+    }
+
+    // While Loops in C
+    int score = 0;
+
+    while (score < 6)
+    {
+        printf("%d\n", score);
+        score++;
+    }
+
+    // Do/While Loop 
+    int i = 0;
+
+    do 
+    {
+        printf("%d\n", i);
+        i++;
+    }
+    while (i < 10);
+
+    // For Loops in C
+    int counter;
+
+    for (counter = 0; counter < 5; counter++) 
+    {
+        printf("%d\n", counter);
+    }
+
+    // Nested For Loops
+    int x_axis, y_axis;
+
+    for (x_axis = 0; x_axis <= 2; ++x_axis)
+    {
+        printf("Outer: %d\n", x_axis);  // Executes 2 times
+        for (y_axis = 0; y_axis <= 3; ++y_axis)
+        {
+            printf(" Inner: %d\n", y_axis);  // Executes 6 times (2 * 3)
+        }
+
+    }
+
+
+
 
 
     return 0;
